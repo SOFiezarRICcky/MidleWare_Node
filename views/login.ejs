@@ -1,28 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+     <title>Latihan Middleware</title>
+  </head>
+  <body>
+     <h1>Form Login</h1><br>
 
-<head>
+      <% if(message.length > 0) { %>
+         <% message.forEach((text) => { %>
+            <p><%= text.message %></p>   
+         <% }) %>
+      <% } %>
 
-</head>
-
-<body>
-    <h1>Form Login</h1><br>
-
-    <% if(message.length > 0) {%>
-    <% message.forEach((text) => { %>
-    <p><%= text.message %></p>
-    <% }) %>
-    <% } %>
-
-
-
-    <form action="proses" method="post">
-        <input type="text" name="username" placeholder="Masukan Username Anda">
-        <br><br>
-        <input type="password" name="password" placeholder="************">
-        <br><br>
+     <form action="proses" method="post">
+        <input type="text" name="username" placeholder="Masukkan username anda"><br><br>
+        <input type="password" name="password" placeholder="***********"><br><br>
         <button type="submit">Login</button>
-    </form>
-</body>
-
+     </form>
+  <body>
 </html>
